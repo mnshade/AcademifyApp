@@ -1,0 +1,41 @@
+table {
+    width: 100%;
+}
+
+.actions {
+    width: 20%;
+}
+
+.edit {
+    margin-right: 15px;
+}
+
+i.edit {
+    color: #eee56c;
+
+}
+
+.delete {
+    margin-right: 15px;
+}
+
+i.delete {
+    color: #e35e6b;
+}
+
+.details {
+    margin-right: 15px;
+}
+
+i.details {
+    color: #7289d6;
+    
+}
+
+button {
+    margin-bottom: 30px;
+}
+
+.mat-form-field{
+    padding-left: 20px;
+}

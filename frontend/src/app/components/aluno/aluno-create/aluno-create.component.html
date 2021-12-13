@@ -1,0 +1,24 @@
+<mat-card class="home mat-elevation-z3">
+    <mat-card-title>
+        Novo aluno
+    </mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput type="text" placeholder="Nome" [(ngModel)]="aluno.nome" name="nome" minlength="3">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="text" placeholder="Matricula" [(ngModel)]="aluno.matricula" name="matricula" required> 
+        </mat-form-field>
+        <mat-form-field>
+            <input type="date" matInput [matDatepicker]="picker" [max]="date" [formControl]="serializedDate"
+                (dateChange)="changeDate($event)">
+            <mat-datepicker #picker [startAt]="date"></mat-datepicker>
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="createAluno()" color="primary">
+        Salvar
+    </button>
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>

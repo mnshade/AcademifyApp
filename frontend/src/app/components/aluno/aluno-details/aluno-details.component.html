@@ -1,0 +1,25 @@
+<mat-card class="home mat-elevation-z3">
+    <mat-card-title>
+        Informações do Aluno
+    </mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput type="text" placeholder="ID" [(ngModel)]="aluno.id" name="id" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="text" placeholder="Data Cadastro" [(ngModel)]="aluno.dataHoraCadastro" name="dataHoraCadastro" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="text" placeholder="Matrícula" [(ngModel)]="aluno.matricula" name="matricula" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="text" placeholder="Data Nascimento" [(ngModel)]="aluno.nascimento" name="nascimento" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="text" placeholder="Nome" [(ngModel)]="aluno.nome" name="nome" disabled>
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="navigateToAlunoRead()" color="primary">
+        Voltar
+    </button>
+</mat-card>
