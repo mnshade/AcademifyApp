@@ -31,7 +31,7 @@ export class AlunoReadComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    
+
   }
 
   navigateToAlunoCreate(): void {
@@ -43,5 +43,5 @@ export class AlunoReadComponent implements OnInit {
     filterValue = filterValue.toLowerCase();
     this.dataSource.filter = filterValue;
   }
-  
+
 }

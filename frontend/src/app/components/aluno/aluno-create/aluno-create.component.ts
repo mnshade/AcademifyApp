@@ -22,7 +22,7 @@ export class AlunoCreateComponent implements OnInit {
   }
 
   date = new Date();
-  serializedDate = new FormControl(null);
+  serialize = new FormControl(null);
 
   constructor(private alunoService: AlunoService, private router: Router) { }
 
@@ -42,7 +42,7 @@ export class AlunoCreateComponent implements OnInit {
     this.router.navigate(['/alunos'])
   }
 
-  changeFormDate(event: MatDatepickerInputEvent<Date>): void {
+  changeDate(event: MatDatepickerInputEvent<Date>): void {
     if (this.aluno && event.value) {
       this.aluno = {
         ...this.aluno,
@@ -50,5 +50,4 @@ export class AlunoCreateComponent implements OnInit {
       }
     }
   }
-
 }

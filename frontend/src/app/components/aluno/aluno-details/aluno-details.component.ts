@@ -15,7 +15,7 @@ export class AlunoDetailsComponent implements OnInit {
     private alunoService: AlunoService,
     private router: Router,
     private route: ActivatedRoute
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     const id = +this.route.snapshot.paramMap.get('id');

@@ -15,13 +15,13 @@ export class AlunoUpdateComponent implements OnInit {
   aluno: Aluno;
 
   date = new Date();
-  serializedDate = new FormControl(null);
-  
+  serialize = new FormControl(null);
+
   constructor(
-    private alunoService: AlunoService, 
-    private router: Router, 
+    private alunoService: AlunoService,
+    private router: Router,
     private route: ActivatedRoute
-    ) { }
+  ) { }
 
   ngOnInit(): void {
     const id = +this.route.snapshot.paramMap.get('id')
@@ -32,18 +32,18 @@ export class AlunoUpdateComponent implements OnInit {
     })
   }
 
-  updateAluno():void {
-    this.alunoService.update(this.aluno).subscribe(()=>{
+  updateAluno(): void {
+    this.alunoService.update(this.aluno).subscribe(() => {
       this.alunoService.showMensage('Aluno atualizado com sucesso')
       this.router.navigate(['/alunos']);
     });
   }
 
-  cancel():void {
+  cancel(): void {
     this.router.navigate(['/alunos'])
   }
 
-  changeFormDate(event: MatDatepickerInputEvent<Date>): void {
+  changeDate(event: MatDatepickerInputEvent<Date>): void {
     if (this.aluno && event.value) {
       this.aluno = {
         ...this.aluno,

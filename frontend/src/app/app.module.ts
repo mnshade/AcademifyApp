@@ -16,12 +16,12 @@ import { MatButtonModule } from '@angular/material/button'
 import { HomeComponent } from './components/home/home.component';
 import { AlunoCreateComponent } from './components/aluno/aluno-create/aluno-create.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatNativeDateModule} from '@angular/material/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 
 import { HttpClientModule } from '@angular/common/http';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input';
 import { AlunoReadComponent } from './components/aluno/aluno-read/aluno-read.component';
@@ -71,7 +71,7 @@ registerLocaleData(localePt);
     MatSortModule,
     MatNativeDateModule,
     MatDatepickerModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'pt-br'},

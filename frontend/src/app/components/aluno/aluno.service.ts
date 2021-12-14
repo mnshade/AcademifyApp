@@ -30,7 +30,7 @@ export class AlunoService {
     )
   }
 
-  erroHandler(e : any): Observable<any>{
+  erroHandler(e: any): Observable<any> {
     this.showMensage('Ocorreu um erro! Tente novamente', true)
     return EMPTY
   }
