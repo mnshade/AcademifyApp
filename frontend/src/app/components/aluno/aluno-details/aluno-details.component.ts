@@ -21,6 +21,8 @@ export class AlunoDetailsComponent implements OnInit {
     const id = +this.route.snapshot.paramMap.get('id');
     this.alunoService.readById(id).subscribe((aluno) => {
       this.aluno = aluno;
+      this.aluno.dataHoraCadastro = new Date(this.aluno.dataHoraCadastro).toLocaleString('pt-BR');
+      this.aluno.nascimento = new Date(this.aluno.nascimento).toLocaleString('pt-BR');
     });
   }
   navigateToAlunoRead(): void {

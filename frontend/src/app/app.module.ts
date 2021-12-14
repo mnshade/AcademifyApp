@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, LOCALE_ID } from '@angular/core';
+import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +19,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 
+
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field'
@@ -28,11 +29,14 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 
-import localePt from '@angular/common/locales/pt';
-import {registerLocaleData} from '@angular/common';
+
 import { AlunoUpdateComponent } from './components/aluno/aluno-update/aluno-update.component';
 import { AlunoDeleteComponent } from './components/aluno/aluno-delete/aluno-delete.component';
-import { AlunoDetailsComponent } from './components/aluno/aluno-details/aluno-details.component'
+import { AlunoDetailsComponent } from './components/aluno/aluno-details/aluno-details.component';
+
+import { registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt';
+import { LOCALE_ID } from '@angular/core';
 
 registerLocaleData(localePt);
 
@@ -46,7 +50,7 @@ registerLocaleData(localePt);
     AlunoReadComponent,
     AlunoUpdateComponent,
     AlunoDeleteComponent,
-    AlunoDetailsComponent
+    AlunoDetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -67,12 +71,11 @@ registerLocaleData(localePt);
     MatSortModule,
     MatNativeDateModule,
     MatDatepickerModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
-  providers: [{
-    provide: LOCALE_ID,
-    useValue: 'pt-BR'
-  }],
+  providers: [
+    {provide: LOCALE_ID, useValue: 'pt-br'},
+  ],
 
   bootstrap: [AppComponent]
 })

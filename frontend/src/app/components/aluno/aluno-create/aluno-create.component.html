@@ -2,7 +2,7 @@
     <mat-card-title>
         Novo aluno
     </mat-card-title>
-    <form>
+    <form class="registeration-form" #registeration="ngForm">
         <mat-form-field>
             <input matInput type="text" placeholder="Nome" [(ngModel)]="aluno.nome" name="nome" minlength="3">
         </mat-form-field>
@@ -10,12 +10,12 @@
             <input matInput type="text" placeholder="Matricula" [(ngModel)]="aluno.matricula" name="matricula" required> 
         </mat-form-field>
         <mat-form-field>
-            <input type="date" matInput [matDatepicker]="picker" [max]="date" [formControl]="serializedDate"
-                (dateChange)="changeDate($event)">
+            <input matInput [matDatepicker]="picker" [formControl]="serializedDate" placeholder="Data Nascimento" [max]="date" (dateChange)="changeFormDate($event)">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker [startAt]="date"></mat-datepicker>
         </mat-form-field>
     </form>
-    <button mat-raised-button (click)="createAluno()" color="primary">
+    <button mat-raised-button [disabled]="!registeration.valid" (click)="createAluno()" color="primary">
         Salvar
     </button>
     <button mat-raised-button (click)="cancel()">
